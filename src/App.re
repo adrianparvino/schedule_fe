@@ -288,7 +288,7 @@ module MainApp = {
           ~body=BodyInit.make(str),
           (),
         )
-        |> fetchWithInit(backendUrl)
+        |> fetchWithInit(backendUrl ++ "/convert")
       )
       |> then_(Fetch.Response.json)
     );
